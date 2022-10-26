@@ -1,0 +1,30 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.redes{
+  margin-right: 1rem;
+}
+
+#logoap{
+  max-width: 8rem;
+
+  margin-left: 2rem;
+}
+img{
+  max-width: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.btn{
+  color:#ddcaac;
+  border:#ddcaac;
+  padding: 0.25rem 1.5rem;
+}
+.btn:hover{
+  background-color: #ddcaac;
+  color:#090920;
+}
+
+

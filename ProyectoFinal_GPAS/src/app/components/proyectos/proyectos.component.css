@@ -1,0 +1,26 @@
+.row{
+  padding: 35px;
+  border-bottom: solid 1px #ddcaac98;
+  background-image: url("../../../assets/img/bg_estrellas5.png");
+  width: 100%;
+  margin: 0;
+}
+div{
+
+  color: #f5ecdebd;
+  font-family:'Josefin Sans', sans-serif;
+}
+
+.contenedor{
+  width: auto;
+  align-items: center;
+
+}
+.text, .image{
+  display: inline-block;
+  text-align:justify;
+}
+
+.img-proyecto:hover{
+  box-shadow: 10px 10px 100px #f5ecdebd;
+}

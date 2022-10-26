@@ -1,0 +1,10 @@
+.row{
+  background-image: url("../../../assets/img/bg_estrellas4.png");
+  width: 100%;
+  object-fit: cover;
+  margin: 0;
+  color: #f5ecdebd;
+  font-family:'Josefin Sans', sans-serif;
+  padding: 35px;
+  border-bottom: solid 1px #ddcaac98;
+}
