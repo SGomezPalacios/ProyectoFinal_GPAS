@@ -4,8 +4,9 @@
       <a href="https://argentinaprograma.inti.gob.ar/" ><img src="../../../assets/img/LogoArgProg.png" id="logoap"></a>
     </div>
     <div class="redes">
-      <a href=""><img src="../../../assets/img/linkedin.png" alt="Linkedin"></a>
-      <button type="button" class="btn btn-outline-light" (click)="login()">LOGIN</button>
+      <a href="https://www.linkedin.com/in/ana-sofia-g%C3%B3mez-palacios-7a67ab107/"><img src="../../../assets/img/linkedin.png" alt="Linkedin"></a>
+      <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESAR</button>
+      <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
     </div>
   </div>
 </div>
