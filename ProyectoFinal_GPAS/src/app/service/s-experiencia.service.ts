@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
   //URL=
-  expURL = 'http//localhost:8080/explab/';
+  expURL = 'https://gpasortfolio.herokuapp.com/explab/';
 
   constructor(private httpClient: HttpClient) { }
 

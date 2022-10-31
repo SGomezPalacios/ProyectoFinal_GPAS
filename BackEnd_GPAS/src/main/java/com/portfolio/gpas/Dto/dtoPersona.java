@@ -9,9 +9,9 @@ public class dtoPersona {
     private String nombre;
     @NotBlank
     private String apellido;
-    @NotBlank
+    
     private String descripcion;
-    @NotBlank
+    
     private String img;
 
     public dtoPersona() {

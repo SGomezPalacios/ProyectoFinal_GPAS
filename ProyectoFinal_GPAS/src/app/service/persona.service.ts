@@ -8,10 +8,21 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'http://localhost:8080/personas/';
+  URL = 'https://gpasortfolio.herokuapp.com/personas/';
 
   constructor(private httpClient: HttpClient) { }
 
+  /*public getPersona(): Observable<persona>{
+    return this.httpClient.get<persona>(this.URL+'traer/perfil');
+  }*/
+
+  public save(Persona: persona): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'create', Persona);
+  }
+
+ /* public save(educacion: Educacion): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'create', educacion);
+  }*/
   public lista(): Observable<persona[]>{
     return this.httpClient.get<persona[]>(this.URL + 'lista');
   }
@@ -19,10 +30,6 @@ export class PersonaService {
   public detail(id: number): Observable<persona>{
     return this.httpClient.get<persona>(this.URL + `detail/${id}`);
   }
-
-  /* public save(educacion: Educacion): Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'create', educacion);
-  }*/
 
   public update(id: number, Persona: persona): Observable<any>{
     return this.httpClient.put<any>(this.URL + `detail/${id}`, Persona);
