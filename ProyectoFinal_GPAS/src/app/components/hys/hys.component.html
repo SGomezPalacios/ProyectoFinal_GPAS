@@ -1,29 +1,16 @@
 <div class="row">
   <h1>Hard & Soft skills</h1>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="80"
-      [showUnits]="false"
-      [title]="'HTML'"
-      [titleColor]="'#f5ecdebd'"
-      [titleFontSize]="'2rem'"
-      [showSubtitle]="false"
-      [outerStrokeWidth]="12"
-      [innerStrokeWidth]="6"
-      [outerStrokeColor]="'#f5ecdebd'"
-      [innerStrokeColor]="'#a4947b70'"
-      [animation]="true"
-      [animationDuration]="500"
-
-    ></circle-progress>
+  <div class="col-lg-2">
+    <button type="button" class= "btn btn-light" routerLink="/newskill" *ngIf="isLogged">Nueva skill</button>
   </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+
+  <div class="text-center col-sm-4 col-md-4 col-lg-4 circ" *ngFor=" let skill of skill">
     <circle-progress
-      [percent]="85"
+      [percent]="(skill.porcentaje)"
       [radius]="80"
       [showUnits]="false"
-      [title]="'HTML'"
+      [title]="(skill.nombre)"
+      [showTitle]="true"
       [titleColor]="'#f5ecdebd'"
       [titleFontSize]="'2rem'"
       [showSubtitle]="false"
@@ -35,59 +22,9 @@
       [animationDuration]="500"
 
     ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="80"
-      [showUnits]="false"
-      [title]="'HTML'"
-      [titleColor]="'#f5ecdebd'"
-      [titleFontSize]="'2rem'"
-      [showSubtitle]="false"
-      [outerStrokeWidth]="12"
-      [innerStrokeWidth]="6"
-      [outerStrokeColor]="'#f5ecdebd'"
-      [innerStrokeColor]="'#a4947b70'"
-      [animation]="true"
-      [animationDuration]="500"
-
-    ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="80"
-      [showUnits]="false"
-      [title]="'HTML'"
-      [titleColor]="'#f5ecdebd'"
-      [titleFontSize]="'2rem'"
-      [showSubtitle]="false"
-      [outerStrokeWidth]="12"
-      [innerStrokeWidth]="6"
-      [outerStrokeColor]="'#f5ecdebd'"
-      [innerStrokeColor]="'#a4947b70'"
-      [animation]="true"
-      [animationDuration]="500"
-
-    ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-      [percent]="85"
-      [radius]="80"
-      [showUnits]="false"
-      [title]="'HTML'"
-      [titleColor]="'#f5ecdebd'"
-      [titleFontSize]="'2rem'"
-      [showSubtitle]="false"
-      [outerStrokeWidth]="12"
-      [innerStrokeWidth]="6"
-      [outerStrokeColor]="'#f5ecdebd'"
-      [innerStrokeColor]="'#a4947b70'"
-      [animation]="true"
-      [animationDuration]="500"
-
-    ></circle-progress>
+    <div>
+      <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editskill/{{skill.id}}"><i class="bi bi-pencil"></i></button></td>
+      <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(skill.id)"><i class="bi bi-trash"></i></button></td>
+    </div>
   </div>
 </div>

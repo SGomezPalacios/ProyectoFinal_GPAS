@@ -1,48 +1,23 @@
-<div class="education row">
+<div class="row" id="education">
   <h1>Educación</h1>
-  <div class="container">
-    <div class="col-sm-12 col-md-8 col-lg-8 text">
-      <h3>Edu1</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quas tempore cum repellendus sint nisi illo impedit hic labore corporis quos aut laudantium facere, exercitationem unde soluta pariatur eius dignissimos!</p>
-    </div>
-    <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 image">
-      <img src="../../../assets/img/Cert_Arg_programa.jpg" alt="" class="img-fluid img-educacion">
-    </div>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-light" routerLink="/nuevaedu" *ngIf="isLogged">Nueva educación</button>
   </div>
-  <div class="container">
-    <div class="col-sm-12 col-md-8 col-lg-8 text">
-      <h3>Edu2</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quas tempore cum repellendus sint nisi illo impedit hic labore corporis quos aut laudantium facere, exercitationem unde soluta pariatur eius dignissimos!</p>
-    </div>
-    <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 image">
-      <img src="../../../assets/img/Cert_Arg_programa.jpg" alt="" class="img-fluid img-educacion">
-    </div>
+
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of educacion">
+          <td><h4>{{Educacion.nombreE}}</h4></td>
+          <td>{{Educacion.descripcionE}}</td>
+          <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil"></i>Editar</button></td>
+          <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Educacion.id)"><i class="bi bi-trash"></i>Borrar</button></td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
-  <div class="container">
-    <div class="col-sm-12 col-md-8 col-lg-8 text">
-      <h3>Edu3</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quas tempore cum repellendus sint nisi illo impedit hic labore corporis quos aut laudantium facere, exercitationem unde soluta pariatur eius dignissimos!</p>
-    </div>
-    <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 image">
-      <img src="../../../assets/img/Cert_Arg_programa.jpg" alt="" class="img-fluid img-educacion">
-    </div>
-  </div>
-  <div class="container">
-    <div class="col-sm-12 col-md-8 col-lg-8 text">
-      <h3>Edu4</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quas tempore cum repellendus sint nisi illo impedit hic labore corporis quos aut laudantium facere, exercitationem unde soluta pariatur eius dignissimos!</p>
-    </div>
-    <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 image">
-      <img src="../../../assets/img/Cert_Arg_programa.jpg" alt="" class="img-fluid img-educacion">
-    </div>
-  </div>
-  <div class="container">
-    <div class="col-sm-12 col-md-8 col-lg-8 text">
-      <h3>Edu5</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quas tempore cum repellendus sint nisi illo impedit hic labore corporis quos aut laudantium facere, exercitationem unde soluta pariatur eius dignissimos!</p>
-    </div>
-    <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 image">
-      <img src="../../../assets/img/Cert_Arg_programa.jpg" alt="" class="img-fluid img-educacion">
-    </div>
-  </div>
+
+
 </div>

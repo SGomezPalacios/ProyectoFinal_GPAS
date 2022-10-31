@@ -8,3 +8,8 @@
   padding: 35px;
   border-bottom: solid 1px #ddcaac98;
 }
+.circ{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
